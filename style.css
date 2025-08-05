@@ -1,0 +1,990 @@
+/* Home ki css About PORTFILO */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+}
+
+body,
+html {
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+#loader {
+    background-color: black;
+    color: white;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeOut 1s ease-out 2s forwards;
+}
+
+.loader-text img {
+    font-size: 2rem;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0%,
+    100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.4;
+    }
+}
+
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+.background-video {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.Hero {
+    color: white;
+    width: 100%;
+    height: 100vh;
+    padding: 20px;
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+    display: none;
+}
+
+#About {
+    display: block;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 40px;
+    padding: 8px 40px;
+    font-family: Arial, sans-serif;
+}
+
+.Tags {
+    display: flex;
+    gap: 10px;
+    font-size: 13px;
+}
+
+.dot {
+    color: orange;
+}
+
+.logo h1 {
+    font-size: 35px;
+    color: white;
+    text-align: center;
+}
+
+.text {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.serach,
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.serach lord-icon,
+.menu lord-icon {
+    width: 28px;
+    height: 28px;
+}
+
+.menu .men {
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.right_content {
+    display: flex;
+    gap: 50px;
+}
+
+.menu::before {
+    content: "";
+    display: inline-block;
+    width: 1px;
+    height: 23px;
+    background-color: #ffffffa1;
+    margin-right: 33px;
+}
+
+.brand-logo {
+    margin: 15px 100px;
+    display: inline-block;
+    background-color: #100f0f;
+    border-radius: 50%;
+}
+
+.brand-logo img {
+    width: 80px;
+}
+
+.diagonal-ribbon.vertical {
+    position: absolute;
+    top: 38%;
+    left: -12px;
+    width: 200px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.D_content {
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+}
+
+.Hero_span {
+    color: #ffffffa3;
+}
+
+.diagonal-ribbon.vertical span {
+    display: inline-block;
+    transform: rotate(90deg);
+
+    font-size: 11px;
+    white-space: nowrap;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+      background: linear-gradient(90deg, white, rgb(15, 190, 232));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+}
+
+
+.diagonal-ribbon.vertical span:hover {
+    color: white;
+}
+
+.Hero_heading h1 {
+    font-size: 4rem;
+    line-height: 105px;
+}
+
+.Hero_heading {
+    margin-left: 184px;
+}
+
+.Headline {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-4%, 62%) rotate(36deg);
+    width: 100%;
+    white-space: nowrap;
+    background-color: white;
+}
+
+#black_slider {
+    top: 50%;
+    left: 50%;
+    transform: translate(-23%, 166%) rotate(-23deg);
+    background-color: #181818;
+}
+
+.track {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 45px;
+    width: fit-content;
+    animation: scrollAnimation 20s linear infinite;
+}
+
+.item {
+    padding: 24px 0px;
+    color: black;
+    text-decoration: none;
+    display: inline-block;
+    white-space: nowrap;
+    font-size: 14px;
+}
+
+.black_item {
+    padding: 24px 0px;
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    white-space: nowrap;
+    font-size: 14px;
+}
+
+@keyframes scrollAnimation {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.menu-hover-area {
+    position: relative;
+    display: inline-block;
+}
+
+.sidebar {
+    position: absolute;
+    top: 46px;
+    right: -51px;
+    transition: right 0.4s ease-in-out;
+    padding: 5px;
+    border-radius: 8px;
+    text-align: center;
+    background-color: #ffffff66;
+    width: 199px;
+    height: 84vh;
+    z-index: 1;
+    transition: all 0.5s ease;
+    opacity: 0;
+    transform: translateX(50px);
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar ul li {
+    opacity: 0;
+    transform: translateX(50px);
+    transition: all 0.5s ease;
+}
+
+.sidebar ul li:nth-child(1) {
+    transition-delay: 0.2s;
+}
+
+.sidebar ul li:nth-child(2) {
+    transition-delay: 0.3s;
+}
+
+.sidebar ul li:nth-child(3) {
+    transition-delay: 0.4s;
+}
+
+.sidebar ul li:nth-child(4) {
+    transition-delay: 0.5s;
+}
+
+.sidebar ul li a {
+    margin-top: 82px;
+    font-size: 16px;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    display: block;
+    transition: all 0.3s ease-in-out;
+}
+
+.sidebar ul li a:hover {
+    color: rgb(15, 190, 232);
+}
+
+.menu-hover-area:hover .sidebar {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.menu-hover-area:hover .sidebar ul li {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+#Service_heading h1 {
+    font-size: 45px;
+    position: relative;
+    color: white;
+    border-bottom: 1px solid white;
+    width: 70px;
+    height: 83px;
+}
+
+.Service_content {
+    margin-left: 500px;
+}
+
+.Service_content h1 {
+    margin: 17px 0px;
+    font-size: 1.5rem;
+}
+
+.Service_content p {
+    font-size: 13px;
+    line-height: 33px;
+    font-style: italic;
+    margin: 20px 0px;
+    text-align: left;
+        color: #b8abab;
+}
+
+.services-section {
+    max-width: 1200px;
+    margin: auto;
+    padding: 80px 20px;
+}
+
+.services-section h2 {
+    font-size: 36px;
+    margin-bottom: 60px;
+    border-bottom: 2px solid white;
+    display: inline-block;
+    padding-bottom: 8px;
+}
+
+.services-slider-wrapper {
+    overflow: hidden;
+    margin: 15px 0px 0px 171px;
+}
+
+.services-grid {
+    display: flex;
+    gap: 40px;
+    animation: scrollX 8s linear infinite;
+    width: max-content;
+}
+
+@keyframes scrollX {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.service-card {
+    flex: 0 0 auto;
+    width: 300px;
+    background-color: #ffffff59;
+    padding: 20px;
+    border-radius: 19px;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.service-card:hover {
+    transform: scale(1.04);
+}
+
+.service-card h3 {
+    font-size: 22px;
+    margin-bottom: 15px;
+    color: #ffffff;
+}
+
+.service-card p {
+    font-size: 15px;
+    line-height: 1.7;
+    color: #cccccc;
+    margin-bottom: 20px;
+}
+
+.service-card a {
+    color: rgb(15, 190, 232);
+    text-decoration: none;
+    font-weight: bold;
+    position: relative;
+}
+
+.service-card a::after {
+    content: "→";
+    margin-left: 6px;
+    transition: margin 0.3s;
+}
+
+.service-card a:hover::after {
+    margin-left: 12px;
+}
+
+#Service_heading h1 {
+    font-size: 40px;
+}
+@media (max-width: 1399px) {
+    .Hero_heading {
+        margin-left: 184px;
+        margin-top: -75px;
+    }
+
+    #About h1 {
+        font-size: 40px;
+        margin-top: 55px;
+    }
+
+    .services-grid {
+        margin: 15px 25px 0px 171px;
+    }
+
+  
+
+    .Hero {
+        overflow: hidden;
+    }
+
+    #Service_heading h1 {
+        font-size: 40px;
+    }
+
+    nav {
+        padding: 8px 64px;
+    }
+
+    .Headline {
+                transform: translate(-7%, -57%) rotate(36deg);
+    }
+    
+    #black_slider {
+        transform: translate(-30%, 166%) rotate(-23deg);
+    }
+}
+@media (max-width: 1322px) {
+
+}
+
+@media (max-width: 1252px) {
+    .Headline {
+        transform: translate(-7%, -57%) rotate(36deg);
+    }
+
+    #black_slider {
+        transform: translate(-21%, 136%) rotate(-33deg);
+    }
+
+    .Hero_heading h1 {
+        font-size: 50px;
+    }
+}
+
+@media (max-width: 1060px) {
+    #About h1 {
+        font-size: 30px;
+        margin-top: 55px;
+        margin-left: 34px;
+    }
+
+    .Hero_heading h1 {
+        font-size: 50px;
+        line-height: 80px;
+    }
+
+    .Hero_heading {
+        margin-left: 133px;
+    }
+
+    .Service_content h1 {
+        font-size: 1rem;
+    }
+
+    .Headline {
+        transform: translate(-7%, -95%) rotate(35deg);
+            top: 44%;
+    }
+
+    #black_slider {
+        transform: translate(-28%, 143%) rotate(-38deg);
+    }
+}
+
+@media (max-width: 1166px) {
+    .Headline {
+               transform: translate(-7%, -122%) rotate(36deg);}
+}
+
+@media (max-width: 996px) {
+
+    .Hero_heading {
+        margin-left: 184px;
+        margin-top: 0px;   
+    }
+
+    .services-slider-wrapper {
+        overflow: hidden;
+        margin: 0px;
+    }
+
+    #About h1 {
+        margin-top: 15px;
+    }
+
+    #Services_vertical {
+        margin: 63px 0px 0px 0px;
+    }
+
+    #Service_heading h1 {
+        position: relative;
+        color: white;
+        border-bottom: none;
+        width: 100%;
+        height: 83px;
+        margin: 0 0 23px;
+    }
+
+    .Service_content {
+        margin-left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .Service_content p {
+        text-align: center;
+    }
+
+    .sidebar {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.9);
+        transform: translateY(100%);
+        opacity: 0;
+        padding-top: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        transition: all 0.5s ease-in-out;
+    }
+
+    .menu-hover-area:hover .sidebar {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    .sidebar ul {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .sidebar ul li {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: all 0.4s ease-in-out;
+    }
+
+    .menu-hover-area:hover .sidebar ul li {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .sidebar ul li a {
+        font-size: 20px;
+        margin: 40px 0;
+        color: white;
+    }
+
+    .brand-logo {
+        margin: 18px 65px;
+    }
+
+    .diagonal-ribbon.vertical {
+        position: static;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        margin: 8px 0 30px;
+    }
+
+    .diagonal-ribbon.vertical span {
+        transform: none;
+        text-align: center;
+    }
+
+    .D_content {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    nav {
+        padding: 0;
+    }
+
+    .Hero_heading {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    #black_slider {
+        transform: translate(-89%, 143%) rotate(39deg);
+    }
+
+    .Headline {
+        transform: translate(4%, 10%) rotate(-45deg); 
+    }
+       .Hero_heading h1 {
+        font-size: 50px;
+        line-height: 80px;
+        margin-top: 0px;
+    }
+}
+@media (max-width: 966px) {
+     .Headline {
+transform: translate(4%, 10%) rotate(-45deg);}
+
+}
+
+@media (max-width: 891px) {
+    .Headline {
+       
+        top: 52%;
+    }
+}
+@media (max-width: 881px) {
+    .right_content {
+        gap: 13px;
+    }
+
+    .brand-logo img {
+        width: 70px;
+    }
+
+    .menu::before {
+        margin-right: 7px;
+    }
+
+    .logo h1 {
+        font-size: 30px;
+    }
+
+    nav {
+        padding: 0 20px;
+    }
+
+    .Headline {
+        transform: translate(4%, 10%) rotate(-45deg);
+        top: 76%;
+        left: 34%;
+    }
+
+    #black_slider {
+        transform: translate(-96%, 143%) rotate(39deg);
+    }
+}
+
+@media (max-width: 764px) {
+    .service-card h3 {
+        font-size: 20px;
+    }
+
+    .service-card p {
+        font-size: 14px;
+    }
+
+    .service-card a {
+        font-weight: 500;
+    }
+
+  
+
+    #Service_heading h1 {
+        margin: 0 0 -3px 0;
+        font-size: 33px;
+    }
+
+    .Service_content h1 {
+        font-size: 23px;
+    }
+
+    .Hero_heading h1 {
+        font-size: 42px;
+        line-height: 69px;
+    }
+
+    .logo h1 {
+        font-size: 29px;
+    }
+
+    .Tags {
+        display: none;
+    }
+
+    .brand-logo {
+        margin: 18px 65px;
+        position: absolute;
+        top: 74%;
+        left: 36%;
+    }
+
+    .diagonal-ribbon.vertical {
+        margin: 60px 0 30px;
+    }
+
+    .Service_content h2 {
+        text-align: center;
+    }
+}
+
+@media (max-width: 738px) {
+    .services-slider-wrapper {
+        overflow: hidden;
+        margin: 24px 0px;
+    }
+}
+@media (max-width: 690px) {
+     #black_slider{
+            transform: translate(-96%, 199%) rotate(39deg);
+                top: 50%;
+    left: 50%;
+        }
+
+}
+
+
+@media (max-width: 577px) {
+
+    .serach lord-icon,
+.menu lord-icon {
+    width: 22px;
+    height: 22px;
+}
+
+    .service-card h3 {
+        font-size: 18px;
+    }
+
+    .service-card p {
+        font-size: 13px;
+    }
+
+    .Hero_heading h1 {
+        font-size: 39px;
+        line-height: 64px;
+    }
+
+    .right_content {
+        gap: 13px;
+    }
+
+    .brand-logo img {
+        width: 70px;
+    }
+
+    .menu {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+    }
+
+    .menu::before {
+        margin-right: 13px;
+    }
+
+    .logo img {
+        width: 130px;
+        height: auto;
+    }
+
+    #black_slider {
+        transform: translate(-92%, 168%) rotate(45deg);
+    }
+
+    .Headline {
+        transform: translate(-1%, 10%) rotate(-45deg);
+    }
+
+    .brand-logo {
+        left: 31%;
+    }
+
+    nav {
+        padding: 0;
+    }
+
+    #Service_heading h1 {
+        margin: 0 0 -27px;
+    }
+
+    .Service_content p {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 504px) {
+    .Service_content p {
+        font-size: 13px;
+    }
+
+    .Service_content h2 {
+        margin: 10px 0;
+        font-size: 1.2rem;
+        text-align: center;
+    }
+}
+
+@media (max-width: 489px) {
+    .services-slider-wrapper {
+        overflow: hidden;
+        margin: 45px 0px;
+    }
+
+    #Services_vertical {
+        margin: 71px 0px 0px 0px;
+    }
+
+    .Hero_heading h1 {
+        font-size: 31px;
+        line-height: 50px;
+    }
+
+    .logo h1 {
+        font-size: 27px;
+    }
+
+    .D_content {
+        gap: 57px;
+    }
+
+    .brand-logo {
+
+  
+        left: 28%;
+        top: 74%;
+    
+}
+    }
+
+    #black_slider {
+        transform: translate(-87%, 226%) rotate(38deg);
+    }
+
+    .logo img {
+        width: 125;
+        height: auto;
+    }
+
+    .Service_content h2 {
+        line-height: 27px;
+    }
+}
+
+@media (max-width: 420px) {
+
+        .serach lord-icon,
+.menu lord-icon {
+    width: 18px;
+    height: 18px;
+}
+    #About_logo {
+        top: 81%;
+    }
+
+    .brand-logo {
+                left: 28%;
+        top: 81%;
+    }
+
+    }
+
+    #black_slider {
+       
+        transform: translate(-79%, 273%) rotate(47deg);
+        top: 54%;
+    
+    }
+
+    .Service_content p {
+        margin: 0;
+    }
+
+    .Service_content {
+        padding: 0px;
+    }
+}
+
+@media (max-width: 390px) {
+    .D_content {
+        gap: 30px;
+    }
+
+    .Hero_heading h1 {
+        font-size: 28px;
+    }
+
+    .logo img {
+        width: 120px;
+        height: auto;
+    }
+
+    .brand-logo img {
+        width: 65px;
+    }
+
+    .menu .men {
+        display: none;
+        font-size: 14px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+}
+
+@media (max-width: 360px) {
+    .D_content {
+        gap: 13px;
+    }
+
+    .Service_content p {
+    margin: 15px 0px;
+}
+    .brand-logo {
+             left: 23%;
+        top: 65%;
+
+
+    }
+
+      .Hero_heading h1 {
+        font-size: 24px;
+        line-height: 44px;
+    }
+
+    .logo img {
+        width: 115px;
+        height: auto;
+    }
+
+    .Service_content p {
+        font-size: 12px;
+        line-height: 30px;
+    }
+}
